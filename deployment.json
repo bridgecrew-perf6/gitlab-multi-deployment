@@ -1,0 +1,23 @@
+[
+    {
+        "repository": "validation-registry",
+        "pipeline": 311798
+    },
+    {
+        "repository": "export-center",
+        "pipeline": ?
+    },
+    {
+        "repository": "promis-exporter",
+        "pipeline": ?
+    },
+    {
+        "repository": "export-order-registry",
+        "pipeline": ?
+    },
+    {
+        "repository": "export-order-matcher",
+        "pipeline": ?
+    }
+
+]
