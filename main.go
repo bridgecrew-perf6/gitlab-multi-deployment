@@ -9,7 +9,7 @@ import (
 const (
 	AccessTokenKey  = "ACCESS_TOKEN"
 	AppInsightsKey  = "APP_INSIGHTS_KEY"
-	GitRepoUrlKey   = "GIT_REPO_KEY"
+	GitRepoUrlKey   = "GIT_REPO_URL"
 	RegistryUserKey = "REGISTRY_USER"
 	RegistryPwKey   = "REGISTRY_PW"
 	GitlabUrlKey    = "GITLAB_API_URL"
