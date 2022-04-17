@@ -1,0 +1,32 @@
+image: golang-kubectl:1.17-1.23.2
+
+
+before_script:
+  - chmod +x adapter/deploy.sh
+  - export KUBECONFIG=${CLOUD_KUBECONFIG_PROD}
+  - export GIT_REPO_URL=${GIT_REPO_URL}
+  - export REGISTRY_PW=${REGISTRY_PW}
+  - export REGISTRY_USER=${REGISTRY_USER}
+  - export APP_INSIGHTS_KEY=${APP_INSIGHTS_KEY}
+  - export ACCESS_TOKEN=${ACCESS_TOKEN}
+  - export GITLAB_API_URL=${GITLAB_API_URL}
+
+
+stages:
+  - test
+  - deploy
+
+deploy-test:
+  stage: test
+  script:
+    - CGO_ENABLED=0 go test -v
+  only:
+    changes:
+      - "*.{go,sh,yml}"
+
+deploy-dependencies:
+  stage: deploy
+  script:
+    - go build
+    - ./dependency-deployment deployment.json
+  when: manual
