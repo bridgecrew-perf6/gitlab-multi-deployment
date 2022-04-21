@@ -11,8 +11,8 @@ var (
 )
 
 const (
-	testDir            = "test-pim/"
-	testFile           = "test-pim/test-deployment.json"
+	testDir            = "test/"
+	testFile           = "test/test-deployment.json"
 	testAppInsightsKey = "TEST-APIK"
 )
 
